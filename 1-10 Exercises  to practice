@@ -1,0 +1,42 @@
+1.- Return the Sum of Two Numbers in APPIAN
+
+Rule Inputs:
+  ri!numberOne Number(Integer)
+  ri!numberTwo Number(Integer)
+
+Code:
+  ri!numberOne+ri!numberTwo
+  
+2.- Convert Minutes into Seconds
+
+Rule Inputs: 
+  ri!minutes Number(Integer)
+  
+Code:
+  ri!minutes*60
+  
+3.- Return the Next Number from the Integer Passed
+
+Rule Inputs:
+  ri!number Number(Integer)
+  
+Code: 
+  ri!number+1
+  
+4.- Area of a Triangle
+
+Rule Inputs: 
+  ri!base Number(Decimal)
+  ri!height Number(Decimal)
+  
+Code: 
+  (ri!base*ri!height)/2
+  
+  5.- Convert Age to Days
+  
+  Rule Inputs
+    ri!age
+    
+  Code:
+    ri!age * 365
+    
