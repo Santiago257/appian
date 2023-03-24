@@ -34,9 +34,47 @@ Code:
   
   5.- Convert Age to Days
   
-  Rule Inputs
-    ri!age
+Rule Inputs
+  ri!age
     
-  Code:
-    ri!age * 365
+Code:
+  ri!age * 365
     
+6.- How Much is True?
+Create a function which returns the number of true values there are in an array.
+  
+Rule Inputs:
+  ri!booleans
+  
+Code: 
+  a!localVariables(
+    local!array:a!forEach(
+      items: ri!booleans,
+      expression: tointeger(fv!item)
+    ),
+    sum(local!array)
+  )
+
+7.- Find Number of Digits in Number
+
+Rule Inputs:
+  ri!number
+  
+Code:
+  len(ri!number)
+
+8.- Check if a text value only has enters or spaces
+
+Rule Inputs:
+  ri!textToCheck
+
+Code: 
+  a!localVariables(
+  local!code: code(ri!textToCheck),
+  local!counter: length(wherecontains({32,10},local!code)),
+    if(
+    length(local!code) = local!counter,
+    "It only contains enters and spaces",
+    "It contains enters, spaces and letter and numbers"
+    )
+  )
